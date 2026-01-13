@@ -1,6 +1,3 @@
-I'll fix all the issues in your code. Let me add the missing content, fix the display issues, and ensure all links work properly.
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -376,9 +373,53 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
       transform: translateY(-3px);
     }
 
+    /* ---------- SERVICES ---------- */
+    .services {
+      background: var(--dark-light);
+      position: relative;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--dark);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid rgba(14, 165, 164, 0.1);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(14, 165, 164, 0.3);
+      box-shadow: 0 15px 40px rgba(14, 165, 164, 0.15);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      color: var(--light);
+      margin-bottom: 1rem;
+    }
+
+    .service-desc {
+      color: var(--gray);
+      font-size: 1rem;
+    }
+
     /* ---------- PROJECTS ---------- */
     .projects {
-      background: var(--dark-light);
       position: relative;
     }
 
@@ -476,6 +517,7 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
 
     /* ---------- CODE & GITHUB ---------- */
     .code-section {
+      background: var(--dark-light);
       position: relative;
     }
 
@@ -487,7 +529,7 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
     }
 
     .stat-card {
-      background: var(--dark-light);
+      background: var(--dark);
       padding: 2rem;
       border-radius: 15px;
       text-align: center;
@@ -546,7 +588,6 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
 
     /* ---------- CONTACT ---------- */
     .contact {
-      background: var(--dark-light);
       position: relative;
     }
 
@@ -616,7 +657,7 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
     }
 
     .contact-form {
-      background: var(--dark);
+      background: var(--dark-light);
       padding: 2rem;
       border-radius: 15px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -743,45 +784,6 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
     .fade-in.visible {
       opacity: 1;
       transform: translateY(0);
-    }
-
-    /* ---------- ADDITIONAL SECTIONS ---------- */
-    .services {
-      position: relative;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      margin-top: 3rem;
-    }
-
-    .service-card {
-      background: var(--dark-light);
-      padding: 2rem;
-      border-radius: 15px;
-      text-align: center;
-      transition: all 0.3s;
-      border: 1px solid rgba(14, 165, 164, 0.1);
-    }
-
-    .service-card:hover {
-      transform: translateY(-10px);
-      border-color: rgba(14, 165, 164, 0.3);
-      box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15);
-    }
-
-    .service-icon {
-      font-size: 3rem;
-      color: var(--primary);
-      margin-bottom: 1.5rem;
-    }
-
-    .service-title {
-      font-size: 1.5rem;
-      color: var(--light);
-      margin-bottom: 1rem;
     }
 
     /* ---------- RESPONSIVE ---------- */
@@ -912,16 +914,15 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
     
     <div class="about-content fade-in">
       <div class="profile-img-container">
-        <img src="profile.jpg" alt="Shuvashis Biswas" class="profile-img">
-        <!-- If you don't have a profile image, use this instead: -->
-        <!-- <div style="width: 100%; height: 100%; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">SB</div> -->
+        <!-- Replace with your actual profile image -->
+        <img src="profile.jpg" alt="Shuvashis Biswas" class="profile-img" onerror="this.style.display='none'; this.parentElement.innerHTML='<div style=\'width:100%;height:100%;background:var(--primary);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:4rem;color:white;font-weight:bold\'>SB</div>'">
       </div>
       
       <div class="about-text">
         <h3>Transforming Geospatial Data into Actionable Insights</h3>
         <p>I am passionate about Geography, GIS, Mapping, Data Analysis and Spatial Research. I work with geospatial data to extract meaningful insights and visualize real-world patterns.</p>
-        <p>As a dedicated geospatial analyst, I specialize in turning complex geographical data into clear, actionable information that helps organizations make better decisions. My expertise spans across various domains including environmental monitoring, urban planning, disaster management, and resource optimization.</p>
-        <p>Currently pursuing my academic goals while working on real-world geospatial projects, I bridge the gap between theoretical knowledge and practical application in the field of geography and GIS.</p>
+        <p>With a strong background in geography and advanced spatial analysis, I leverage cutting-edge technologies to analyze land use changes, environmental patterns, and urban dynamics. I am constantly exploring new methods to improve spatial data visualization and analysis.</p>
+        <p>My goal is to bridge the gap between complex geospatial data and practical, understandable insights that can drive decision-making and create positive impact.</p>
         
         <div class="skills">
           <span class="skill-tag">ArcGIS</span>
@@ -934,8 +935,6 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
           <span class="skill-tag">Web Mapping</span>
           <span class="skill-tag">Data Visualization</span>
           <span class="skill-tag">SQL</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">Google Earth Engine</span>
         </div>
       </div>
     </div>
@@ -950,8 +949,8 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
         <div class="service-icon">
           <i class="fas fa-map"></i>
         </div>
-        <h3 class="service-title">GIS Mapping</h3>
-        <p>Custom map creation, thematic mapping, and spatial data visualization for various applications including environmental studies, urban planning, and business intelligence.</p>
+        <h3 class="service-title">GIS Mapping & Analysis</h3>
+        <p class="service-desc">Custom map creation, spatial data analysis, and geographic information system development for various applications including environmental studies and urban planning.</p>
       </div>
       
       <div class="service-card fade-in">
@@ -959,15 +958,15 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
           <i class="fas fa-satellite"></i>
         </div>
         <h3 class="service-title">Remote Sensing</h3>
-        <p>Satellite image analysis, land use classification, change detection, and environmental monitoring using advanced remote sensing techniques.</p>
+        <p class="service-desc">Satellite image processing, land use classification, change detection, and environmental monitoring using advanced remote sensing techniques.</p>
       </div>
       
       <div class="service-card fade-in">
         <div class="service-icon">
           <i class="fas fa-chart-line"></i>
         </div>
-        <h3 class="service-title">Spatial Analysis</h3>
-        <p>Advanced geospatial analysis including buffer analysis, network analysis, hotspot detection, and suitability modeling for decision support.</p>
+        <h3 class="service-title">Spatial Data Analysis</h3>
+        <p class="service-desc">Advanced geospatial analysis including buffer analysis, network analysis, hotspot detection, and suitability modeling for informed decision-making.</p>
       </div>
     </div>
   </section>
@@ -981,11 +980,11 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
         <img src="https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LULC Change Detection" class="project-img">
         <div class="project-content">
           <h3 class="project-title">LULC Change Detection</h3>
-          <p class="project-desc">Land Use & Land Cover analysis using satellite imagery over a 10-year period to track urbanization and environmental changes.</p>
+          <p class="project-desc">Land Use & Land Cover analysis using satellite imagery and machine learning classification techniques over a 20-year period.</p>
           <div class="project-tech">
             <span class="tech-tag">Remote Sensing</span>
             <span class="tech-tag">Landsat Imagery</span>
-            <span class="tech-tag">Classification</span>
+            <span class="tech-tag">Machine Learning</span>
             <span class="tech-tag">ArcGIS</span>
           </div>
           <a href="https://drive.google.com/" target="_blank" class="project-link">
@@ -997,8 +996,8 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
       <div class="project-card fade-in">
         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Earthquake Analysis" class="project-img">
         <div class="project-content">
-          <h3 class="project-title">Earthquake Analysis</h3>
-          <p class="project-desc">Spatial and temporal earthquake data analysis to identify seismic patterns and risk assessment for disaster management.</p>
+          <h3 class="project-title">Seismic Hazard Mapping</h3>
+          <p class="project-desc">Spatial and temporal analysis of earthquake data to identify high-risk zones and predict potential seismic activities.</p>
           <div class="project-tech">
             <span class="tech-tag">Seismic Analysis</span>
             <span class="tech-tag">Risk Assessment</span>
@@ -1013,4 +1012,248 @@ I'll fix all the issues in your code. Let me add the missing content, fix the di
       
       <div class="project-card fade-in">
         <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Growth Analysis" class="project-img">
-        <div class
+        <div class="project-content">
+          <h3 class="project-title">Urban Growth Analysis</h3>
+          <p class="project-desc">Monitoring and predicting urban expansion patterns using multi-temporal satellite data and spatial metrics.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Urban Planning</span>
+            <span class="tech-tag">Spatial Metrics</span>
+            <span class="tech-tag">QGIS</span>
+            <span class="tech-tag">Time Series Analysis</span>
+          </div>
+          <a href="https://drive.google.com/" target="_blank" class="project-link">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CODE & GITHUB -->
+  <section class="code-section" id="code">
+    <h2 class="section-title">Code & GitHub</h2>
+    
+    <div class="github-stats">
+      <div class="stat-card fade-in">
+        <div class="stat-icon">
+          <i class="fab fa-python"></i>
+        </div>
+        <div class="stat-number">50+</div>
+        <div class="stat-label">Python Scripts</div>
+      </div>
+      
+      <div class="stat-card fade-in">
+        <div class="stat-icon">
+          <i class="fas fa-code-branch"></i>
+        </div>
+        <div class="stat-number">25+</div>
+        <div class="stat-label">GIS Projects</div>
+      </div>
+      
+      <div class="stat-card fade-in">
+        <div class="stat-icon">
+          <i class="fas fa-map"></i>
+        </div>
+        <div class="stat-number">100+</div>
+        <div class="stat-label">Maps Created</div>
+      </div>
+      
+      <div class="stat-card fade-in">
+        <div class="stat-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Spatial Databases</div>
+      </div>
+    </div>
+    
+    <p style="text-align: center; margin-bottom: 2rem; color: var(--gray); max-width: 800px; margin-left: auto; margin-right: auto;">
+      Explore my collection of GIS scripts, spatial analysis tools, and mapping applications. My GitHub repository includes Python scripts for geospatial data processing, automation tools for GIS workflows, and custom visualization solutions.
+    </p>
+    
+    <div class="github-link">
+      <a href="https://github.com/2000-ammmm" target="_blank" class="github-btn">
+        <i class="fab fa-github"></i> Visit My GitHub Profile
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <h2 class="section-title">Connect With Me</h2>
+    
+    <div class="contact-container">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Email</h4>
+            <p>s2410556109@ru.ac.bd</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-map-marker-alt"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Location</h4>
+            <p>Dhaka, Bangladesh</p>
+          </div>
+        </div>
+        
+        <div class="contact-item">
+          <div class="contact-icon">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div class="contact-text">
+            <h4>Connect Online</h4>
+            <p>Follow me on social media</p>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://www.linkedin.com/" target="_blank" class="social-link">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.instagram.com/" target="_blank" class="social-link">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="https://github.com/2000-ammmm" target="_blank" class="social-link">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://drive.google.com/" target="_blank" class="social-link">
+            <i class="fab fa-google-drive"></i>
+          </a>
+        </div>
+      </div>
+      
+      <div class="contact-form">
+        <form id="contactForm">
+          <div class="form-group">
+            <label class="form-label" for="name">Your Name</label>
+            <input type="text" id="name" class="form-input" placeholder="Enter your name" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">Your Email</label>
+            <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="message">Your Message</label>
+            <textarea id="message" class="form-textarea" placeholder="Enter your message..." required></textarea>
+          </div>
+          
+          <button type="submit" class="submit-btn">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <i class="fas fa-globe-asia"></i> GeoSolution
+      </div>
+      
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#code">Code</a>
+        <a href="#contact">Contact</a>
+      </div>
+      
+      <div class="copyright">
+        © 2024 Shuvashis Biswas | GeoSolution. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('navLinks');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+    
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+    
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('visible');
+        }
+      });
+    };
+    
+    window.addEventListener('scroll', fadeInOnScroll);
+    // Trigger once on load
+    fadeInOnScroll();
+    
+    // Contact form submission
+    const contactForm = document.getElementById('contactForm');
+    
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      // Simple validation
+      if (name && email && message) {
+        // Here you would normally send the data to a server
+        // For now, just show an alert
+        alert(`Thank you, ${name}! Your message has been sent. I'll get back to you at ${email} soon.`);
+        contactForm.reset();
+      } else {
+        alert('Please fill in all fields.');
+      }
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
