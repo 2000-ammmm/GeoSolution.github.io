@@ -1,3 +1,6 @@
+I'll fix all the issues in your code. Let me add the missing content, fix the display issues, and ensure all links work properly.
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -742,6 +745,45 @@
       transform: translateY(0);
     }
 
+    /* ---------- ADDITIONAL SECTIONS ---------- */
+    .services {
+      position: relative;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .service-card {
+      background: var(--dark-light);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s;
+      border: 1px solid rgba(14, 165, 164, 0.1);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      border-color: rgba(14, 165, 164, 0.3);
+      box-shadow: 0 15px 30px rgba(14, 165, 164, 0.15);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      color: var(--primary);
+      margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+      font-size: 1.5rem;
+      color: var(--light);
+      margin-bottom: 1rem;
+    }
+
     /* ---------- RESPONSIVE ---------- */
     @media (max-width: 992px) {
       .about-content {
@@ -812,6 +854,10 @@
       .github-stats {
         grid-template-columns: 1fr;
       }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -831,6 +877,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#code">Code</a></li>
         <li><a href="#contact">Contact</a></li>
@@ -865,13 +912,16 @@
     
     <div class="about-content fade-in">
       <div class="profile-img-container">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Shuvashis Biswas" class="profile-img">
+        <img src="profile.jpg" alt="Shuvashis Biswas" class="profile-img">
+        <!-- If you don't have a profile image, use this instead: -->
+        <!-- <div style="width: 100%; height: 100%; background: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 4rem; color: white;">SB</div> -->
       </div>
       
       <div class="about-text">
         <h3>Transforming Geospatial Data into Actionable Insights</h3>
-        <p>I am a passionate Geospatial Analyst with expertise in GIS, Remote Sensing, and Spatial Data Science. My work focuses on extracting meaningful insights from geospatial data to solve real-world problems and visualize complex patterns.</p>
-        <p>With a strong background in geography and advanced spatial analysis, I leverage cutting-edge technologies to analyze land use changes, environmental patterns, and urban dynamics. I am constantly exploring new methods to improve spatial data visualization and analysis.</p>
+        <p>I am passionate about Geography, GIS, Mapping, Data Analysis and Spatial Research. I work with geospatial data to extract meaningful insights and visualize real-world patterns.</p>
+        <p>As a dedicated geospatial analyst, I specialize in turning complex geographical data into clear, actionable information that helps organizations make better decisions. My expertise spans across various domains including environmental monitoring, urban planning, disaster management, and resource optimization.</p>
+        <p>Currently pursuing my academic goals while working on real-world geospatial projects, I bridge the gap between theoretical knowledge and practical application in the field of geography and GIS.</p>
         
         <div class="skills">
           <span class="skill-tag">ArcGIS</span>
@@ -884,7 +934,40 @@
           <span class="skill-tag">Web Mapping</span>
           <span class="skill-tag">Data Visualization</span>
           <span class="skill-tag">SQL</span>
+          <span class="skill-tag">JavaScript</span>
+          <span class="skill-tag">Google Earth Engine</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <h2 class="section-title">My Services</h2>
+    
+    <div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <i class="fas fa-map"></i>
+        </div>
+        <h3 class="service-title">GIS Mapping</h3>
+        <p>Custom map creation, thematic mapping, and spatial data visualization for various applications including environmental studies, urban planning, and business intelligence.</p>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <i class="fas fa-satellite"></i>
+        </div>
+        <h3 class="service-title">Remote Sensing</h3>
+        <p>Satellite image analysis, land use classification, change detection, and environmental monitoring using advanced remote sensing techniques.</p>
+      </div>
+      
+      <div class="service-card fade-in">
+        <div class="service-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 class="service-title">Spatial Analysis</h3>
+        <p>Advanced geospatial analysis including buffer analysis, network analysis, hotspot detection, and suitability modeling for decision support.</p>
       </div>
     </div>
   </section>
@@ -898,11 +981,11 @@
         <img src="https://images.unsplash.com/photo-1564053489984-317bbd824340?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="LULC Change Detection" class="project-img">
         <div class="project-content">
           <h3 class="project-title">LULC Change Detection</h3>
-          <p class="project-desc">Comprehensive analysis of Land Use & Land Cover changes over 20 years using satellite imagery and machine learning classification techniques.</p>
+          <p class="project-desc">Land Use & Land Cover analysis using satellite imagery over a 10-year period to track urbanization and environmental changes.</p>
           <div class="project-tech">
             <span class="tech-tag">Remote Sensing</span>
             <span class="tech-tag">Landsat Imagery</span>
-            <span class="tech-tag">Machine Learning</span>
+            <span class="tech-tag">Classification</span>
             <span class="tech-tag">ArcGIS</span>
           </div>
           <a href="https://drive.google.com/" target="_blank" class="project-link">
@@ -914,8 +997,8 @@
       <div class="project-card fade-in">
         <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Earthquake Analysis" class="project-img">
         <div class="project-content">
-          <h3 class="project-title">Seismic Hazard Mapping</h3>
-          <p class="project-desc">Spatial and temporal analysis of earthquake data to identify high-risk zones and predict potential seismic activities using statistical models.</p>
+          <h3 class="project-title">Earthquake Analysis</h3>
+          <p class="project-desc">Spatial and temporal earthquake data analysis to identify seismic patterns and risk assessment for disaster management.</p>
           <div class="project-tech">
             <span class="tech-tag">Seismic Analysis</span>
             <span class="tech-tag">Risk Assessment</span>
@@ -925,4 +1008,9 @@
           <a href="https://drive.google.com/" target="_blank" class="project-link">
             View Project <i class="fas fa-arrow-right"></i>
           </a>
-       
+        </div>
+      </div>
+      
+      <div class="project-card fade-in">
+        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Urban Growth Analysis" class="project-img">
+        <div class
